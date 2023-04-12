@@ -39,6 +39,9 @@ return require("packer").startup(function(use)
   -- Rust Support
   use 'rust-lang/rust.vim'
 
+  -- Undotree
+  use 'mbbill/undotree'
+
   -- Language Server Provider
   use {
     'VonHeikemen/lsp-zero.nvim',
