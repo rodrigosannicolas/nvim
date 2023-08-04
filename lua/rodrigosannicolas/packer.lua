@@ -21,9 +21,6 @@ return require("packer").startup(function(use)
   -- Git inline blame
   use { 'lewis6991/gitsigns.nvim' }
 
-  -- Linting
-  use "dense-analysis/ale"
-
   -- Git wrapper
   use('tpope/vim-fugitive')
 
@@ -36,11 +33,11 @@ return require("packer").startup(function(use)
   -- Comment lines
   use "tpope/vim-commentary"
 
-  -- Rust Support
-  use 'rust-lang/rust.vim'
-
   -- Undotree
   use 'mbbill/undotree'
+
+  -- Zenmode
+  use { "folke/zen-mode.nvim", opts = { } }
 
   -- Language Server Provider
   use {

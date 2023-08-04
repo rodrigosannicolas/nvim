@@ -67,4 +67,8 @@ local function on_attach(bufnr)
   vim.keymap.set('n', 'r', api.fs.rename_sub, opts('Rename: Omit Filename'))
 end
 
-require("nvim-tree").setup({ on_attach = on_attach, })
+require("nvim-tree").setup({
+  on_attach = on_attach,
+  view = { adaptive_size = true },
+  update_focused_file = { enable = true }
+})
