@@ -1,3 +1,5 @@
+require("telescope").setup { extensions = { file_browser = { grouped = true } } }
+
 local builtin = require('telescope.builtin')
 local file_browser = require "telescope".extensions.file_browser.file_browser
 
