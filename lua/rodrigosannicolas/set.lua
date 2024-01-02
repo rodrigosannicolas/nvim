@@ -28,3 +28,4 @@ vim.opt.clipboard = "unnamedplus"                        -- controls how Vim int
 vim.opt.hidden = true                                    -- allows Vim to switch between buffers without requiring them to be saved first
 vim.opt.backspace = { "indent", "eol", "start" }         -- controls the behavior of the Backspace key in insert mode
 vim.opt.completeopt = { "menu" , "menuone", "noselect" } -- controls the behavior of the command-line completion feature in Vim
+vim.opt.cmdheight = 0                                    -- command line height
