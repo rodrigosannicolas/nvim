@@ -16,13 +16,10 @@ return require("packer").startup(function(use)
   use { "nvim-telescope/telescope-file-browser.nvim" }
 
   -- Airline
-  use { 'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true } }
+  -- use { 'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true } }
 
   -- Git inline blame
   use { 'lewis6991/gitsigns.nvim' }
-
-  -- Git wrapper
-  use('tpope/vim-fugitive')
 
   -- Auto pairs
   use {	"windwp/nvim-autopairs", config = function() require("nvim-autopairs").setup {} end }
@@ -33,15 +30,13 @@ return require("packer").startup(function(use)
   -- Comment lines
   use "tpope/vim-commentary"
 
-  -- Undotree
-  use 'mbbill/undotree'
-
   -- Zenmode
   use { "folke/zen-mode.nvim", opts = { } }
 
   -- Language Server Provider
   use {
     'VonHeikemen/lsp-zero.nvim',
+    branch = 'v3.x',
     requires = {
       -- LSP Support
       {'neovim/nvim-lspconfig'},
