@@ -36,6 +36,8 @@ cmp.setup({
   formatting = lsp_zero.cmp_format(),
   mapping = cmp.mapping.preset.insert({
     ['<S-Tab>'] = cmp.mapping.select_prev_item(cmp_select),
+    ['<CR>'] = cmp.mapping.confirm({ select = true }),
+    ['<C-Space>'] = cmp.mapping.complete(),
     ['<Tab>'] = cmp.mapping.select_next_item(cmp_select),
   }),
 })
