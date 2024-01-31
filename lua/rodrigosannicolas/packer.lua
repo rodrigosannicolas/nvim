@@ -16,7 +16,7 @@ return require("packer").startup(function(use)
   use { "nvim-telescope/telescope-file-browser.nvim" }
 
   -- Airline
-  -- use { 'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true } }
+  use { 'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true } }
 
   -- Git inline blame
   use { 'lewis6991/gitsigns.nvim' }

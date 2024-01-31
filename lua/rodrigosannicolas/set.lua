@@ -15,7 +15,7 @@ vim.opt.scrolloff = 8                                    -- sets the number of l
 vim.opt.termguicolors = true                             -- enables true color support in Vim on terminals that support it
 vim.opt.mouse = "a"                                      -- enables or disables mouse support in the Vim window
 vim.opt.clipboard = "unnamedplus"                        -- controls how Vim interacts with the system clipboard
-vim.opt.cmdheight = 0                                    -- command line height
+vim.opt.cmdheight = 1                                    -- command line height
 vim.opt.background = "dark"
 
 -- Search
