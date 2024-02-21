@@ -52,6 +52,3 @@ vim.keymap.set("n", "N", "Nzzzv")
 -- Reorder opened tabs
 vim.keymap.set("n", "<leader>-", ":tabmove -1<CR>")
 vim.keymap.set("n", "<leader>+", ":tabmove +1<CR>")
-
--- Open netrw
-vim.keymap.set("n", "<leader>e", ":Vexplore<CR>")
