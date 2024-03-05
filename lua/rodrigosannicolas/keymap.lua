@@ -33,12 +33,6 @@ vim.keymap.set("n", "L", "$", { desc = 'Move cursor to the end of the line' })
 -- Redo
 vim.keymap.set("n", "<Leader>u", "<C-R>", { desc = 'Redo the last undone action' })
 
--- Close current buffer
-vim.keymap.set("n", "<Leader>q", ":q<CR>", { desc = 'Close the current buffer' })
-
--- Save current buffer
-vim.keymap.set("n", "<Leader>w", ":wa<CR>", { desc = 'Save all modified buffers' })
-
 -- Enter insert mode using jj
 vim.keymap.set("i", "jj", "<esc>", { desc = 'Exit insert mode and enter normal mode' })
 
