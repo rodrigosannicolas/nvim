@@ -38,6 +38,8 @@ vim.opt.smarttab = true                                     -- makes the Tab key
 
 -- -- Backup files
 vim.opt.undofile = true                                     -- Save undo history
+vim.opt.backup = false                                      -- controls whether backup files should be created when editing a file
+vim.opt.swapfile = false                                    -- controls whether swap files should be created to preserve changes made to a file in case Vim crashes
 
 -- -- General behavior
 vim.opt.updatetime = 50                                     -- sets the amount of time, in milliseconds, that Vim waits before writing changes to a file vim.opt.hidden = true                                    -- allows Vim to switch between buffers without requiring them to be saved first
