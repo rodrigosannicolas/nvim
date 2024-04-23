@@ -44,9 +44,6 @@ vim.cmd[[
    augroup END
 ]]
 
--- Set cursorline color
-vim.api.nvim_set_hl(0, "CursorLine", { bg = "#212327" })
-
 -- -- Backup files
 vim.opt.undofile = true                                     -- Save undo history
 vim.opt.backup = false                                      -- controls whether backup files should be created when editing a file
