@@ -4,6 +4,7 @@ return require("packer").startup(function(use)
 
   -- Colorscheme
   use({ 'rose-pine/neovim', as = 'rose-pine' })
+  use ({ 'projekt0n/github-nvim-theme' })
 
 	-- File explorer
   use { "nvim-tree/nvim-tree.lua", requires = { "nvim-tree/nvim-web-devicons" } }
