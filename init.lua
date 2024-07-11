@@ -1,1 +1,3 @@
-require("rodrigosannicolas")
+require("config.lazy")
+require("config.set")
+require("config.keymap")
