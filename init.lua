@@ -1,3 +1,3 @@
+require("config.options")
 require("config.lazy")
-require("config.set")
-require("config.keymap")
+require("config.mappings")

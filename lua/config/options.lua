@@ -36,14 +36,6 @@ vim.opt.expandtab = true                                    -- replaces tab char
 vim.opt.smartindent = true                                  -- automatically indents new lines based on the indentation level of the previous line
 vim.opt.smarttab = true                                     -- makes the Tab key insert spaces or tabs, depending on the context
 
--- Use tabs for indentation for ruby
-vim.cmd[[
-  augroup ruby_settings
-    autocmd!
-      autocmd FileType ruby setlocal tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
-   augroup END
-]]
-
 -- -- Backup files
 vim.opt.undofile = true                                     -- Save undo history
 vim.opt.backup = false                                      -- controls whether backup files should be created when editing a file
