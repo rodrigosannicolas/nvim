@@ -7,7 +7,7 @@ return {
     "hrsh7th/cmp-nvim-lsp",
     "L3MON4D3/LuaSnip",
   },
-  config = function ()
+  config = function()
     vim.keymap.set("n", "<leader>m", "<cmd>Mason<cr>")
 
     vim.keymap.set("n", "gl", "<cmd>lua vim.diagnostic.open_float()<cr>")
@@ -26,14 +26,14 @@ return {
         vim.keymap.set("n", "gr", "<cmd>lua vim.lsp.buf.references()<cr>", opts)
         vim.keymap.set("n", "gs", "<cmd>lua vim.lsp.buf.signature_help()<cr>", opts)
         vim.keymap.set("n", "<F2>", "<cmd>lua vim.lsp.buf.rename()<cr>", opts)
-        vim.keymap.set({"n", "x"}, "<F3>", "<cmd>lua vim.lsp.buf.format({async = true})<cr>", opts)
+        vim.keymap.set({ "n", "x" }, "<F3>", "<cmd>lua vim.lsp.buf.format({async = true})<cr>", opts)
         vim.keymap.set("n", "<F4>", "<cmd>lua vim.lsp.buf.code_action()<cr>", opts)
       end
     })
 
     require("mason").setup({})
     require("mason-lspconfig").setup({
-      ensure_installed = { "tsserver", "lua_ls", "graphql"},
+      ensure_installed = { "tsserver", "lua_ls", "graphql" },
       handlers = {
         -- DEFAULT SETUP
         function(server)
@@ -42,7 +42,7 @@ return {
           })
         end,
         -- CUSTOM LSP CONFIGURATIONS
-        lua_ls = function ()
+        lua_ls = function()
           require('lspconfig').lua_ls.setup({
             capabilities = require('cmp_nvim_lsp').default_capabilities(),
             settings = {
@@ -51,7 +51,7 @@ return {
                   version = 'LuaJIT'
                 },
                 diagnostics = {
-                  globals = {'vim'},
+                  globals = { 'vim' },
                 },
                 workspace = {
                   library = {
@@ -83,8 +83,8 @@ return {
       sources = {
         { name = 'path' },
         { name = 'nvim_lsp', keyword_length = 1 },
-        { name = 'buffer', keyword_length = 3 },
-        { name = 'luasnip', keyword_length = 2 },
+        { name = 'buffer',   keyword_length = 3 },
+        { name = 'luasnip',  keyword_length = 2 },
       },
       window = {
         documentation = cmp.config.window.bordered()
@@ -124,7 +124,7 @@ return {
           else
             fallback()
           end
-        end, {'i', 's'}),
+        end, { 'i', 's' }),
 
         ['<C-b>'] = cmp.mapping(function(fallback)
           if luasnip.jumpable(-1) then
@@ -132,7 +132,7 @@ return {
           else
             fallback()
           end
-        end, {'i', 's'}),
+        end, { 'i', 's' }),
 
         ['<Tab>'] = cmp.mapping(function(fallback)
           local col = vim.fn.col('.') - 1
@@ -144,7 +144,7 @@ return {
           else
             cmp.complete()
           end
-        end, {'i', 's'}),
+        end, { 'i', 's' }),
 
         ['<S-Tab>'] = cmp.mapping(function(fallback)
           if cmp.visible() then
@@ -152,7 +152,7 @@ return {
           else
             fallback()
           end
-        end, {'i', 's'}),
+        end, { 'i', 's' }),
       },
     })
   end
