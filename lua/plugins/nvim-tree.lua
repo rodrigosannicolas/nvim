@@ -1,13 +1,12 @@
 return {
-  {
-    "nvim-tree/nvim-tree.lua",
-    requires = { "nvim-tree/nvim-web-devicons" },
-    init = function()
-      vim.keymap.set("n", "<Leader>n", ":NvimTreeToggle<CR>")
-    end,
-    opts = {
+  "nvim-tree/nvim-tree.lua",
+  config = function ()
+    vim.keymap.set('n', "<leader>n", ":NvimTreeToggle<CR>" )
+
+    require("nvim-tree").setup({
       view = { adaptive_size = true },
       update_focused_file = { enable = true },
+
       on_attach = function (bufnr)
         local api = require('nvim-tree.api')
 
@@ -73,6 +72,6 @@ return {
         vim.keymap.set('n', 't', api.node.open.tab, opts('Open: New Tab'))
         vim.keymap.set('n', 'r', api.fs.rename_sub, opts('Rename: Omit Filename'))
       end
-    }
-  }
+    })
+  end
 }
