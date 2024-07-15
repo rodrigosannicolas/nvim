@@ -23,7 +23,7 @@ vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' } -- Sets how neov
 vim.opt.inccommand = 'split'                                -- Preview substitutions
 vim.opt.laststatus = 3                                      -- Global statusline
 
--- -- Search
+-- Search
 vim.opt.hlsearch = true                                     -- highlights all instances of the search pattern in the file
 vim.opt.ignorecase = true                                   -- makes searches case-insensitive by default
 vim.opt.smartcase = true                                    -- makes searches case-sensitive only if the search pattern contains at least one uppercase letter
@@ -36,11 +36,11 @@ vim.opt.expandtab = true                                    -- replaces tab char
 vim.opt.smartindent = true                                  -- automatically indents new lines based on the indentation level of the previous line
 vim.opt.smarttab = true                                     -- makes the Tab key insert spaces or tabs, depending on the context
 
--- -- Backup files
+-- Backup files
 vim.opt.undofile = true                                     -- Save undo history
 vim.opt.backup = false                                      -- controls whether backup files should be created when editing a file
 vim.opt.swapfile = false                                    -- controls whether swap files should be created to preserve changes made to a file in case Vim crashes
 
--- -- General behavior
+-- General behavior
 vim.opt.updatetime = 50                                     -- sets the amount of time, in milliseconds, that Vim waits before writing changes to a file vim.opt.hidden = true                                    -- allows Vim to switch between buffers without requiring them to be saved first
 vim.opt.timeoutlen = 300                                    -- Decrease update time

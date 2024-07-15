@@ -6,16 +6,22 @@ return {
     "nvim-telescope/telescope-file-browser.nvim"
   },
   config = function ()
-    vim.keymap.set("n", "<C-p>", function ()
+    vim.keymaps.set("n", "<C-p>", function ()
       require("telescope").extensions.file_browser.file_browser({ path = "%:h:p", select_buffer = true })
     end)
 
-    vim.keymap.set("n", "<leader>ps", function ()
+    vim.keymaps.set("n", "<leader>ps", function ()
       require("telescope.builtin").grep_string({ search = vim.fn.input("Grep > ") })
     end)
 
-    vim.keymap.set("n", "<leader><leader>", function ()
+    vim.keymaps.set("n", "<leader><leader>", function ()
       require("telescope.builtin").git_files()
     end)
+
+    require("telescope").setup({
+      extensions = {
+        file_browser = { grouped = true }
+      }
+    })
   end
 }
