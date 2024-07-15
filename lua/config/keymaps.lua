@@ -63,4 +63,3 @@ vim.keymap.set("n", "N", "Nzzzv", { desc = 'Move to the previous search match an
 -- Reorder opened tabs
 vim.keymap.set("n", "<leader>-", ":tabmove -1<CR>", { desc = 'Move current tab to the left' })
 vim.keymap.set("n", "<leader>+", ":tabmove +1<CR>", { desc = 'Move current tab to the right' })
-
