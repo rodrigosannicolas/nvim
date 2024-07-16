@@ -22,7 +22,7 @@ return {
       require("telescope.builtin").git_files()
     end)
 
-    vim.keymap.set("n", "<leader>lg", function()
+    vim.keymap.set("n", "<leader>wg", function()
       require("telescope.builtin").live_grep()
     end)
 
