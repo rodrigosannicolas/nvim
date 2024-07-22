@@ -11,10 +11,10 @@ return {
         html = { { 'prettierd', "prettier" } },
         css = { { 'prettierd', "prettier" } },
       },
-      format_on_save = {
-        lsp_fallback = true,
-        timeout_ms = 500
-      }
+      -- format_on_save = {
+      --   lsp_fallback = true,
+      --   timeout_ms = 500
+      -- }
     })
   end
 }
