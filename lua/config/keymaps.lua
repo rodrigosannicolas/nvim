@@ -28,6 +28,13 @@ vim.keymap.set("i", "!", "!<c-g>u", { desc = 'Undo the last change after enterin
 vim.keymap.set("i", "?", "?<c-g>u", { desc = 'Undo the last change after entering a question mark' })
 vim.keymap.set("i", ";", ";<c-g>u", { desc = 'Undo the last change after entering a semicolon' })
 
+-- Diagnostics
+vim.keymap.set("n", "gl", vim.diagnostic.open_float)
+vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous [D]iagnostic message' })
+vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next [D]iagnostic message' })
+vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Show diagnostic [E]rror messages' })
+vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
+
 -- Search and replace
 vim.keymap.set("n", "<leader>s", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>", { desc = 'Search and replace occurrences of the word under the cursor' })
 
