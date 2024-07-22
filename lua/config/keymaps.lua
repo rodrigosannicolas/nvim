@@ -1,3 +1,5 @@
+-- Moving through splits
+vim.keymap.set("n", "<Leader>h", "<C-W>h", { desc = 'Move focus to the left window' })
 vim.keymap.set("n", "<Leader>l", "<C-W>l", { desc = 'Move focus to the right window' })
 vim.keymap.set("n", "<Leader>j", "<C-W>j", { desc = 'Move focus to the lower window' })
 vim.keymap.set("n", "<Leader>k", "<C-W>k", { desc = 'Move focus to the upper window' })
