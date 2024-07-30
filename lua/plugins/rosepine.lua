@@ -2,7 +2,6 @@ return {
   "rose-pine/neovim",
   name = "rose-pine",
   config = function ()
-    vim.cmd("colorscheme rose-pine")
     require("rose-pine").setup({
       dark_variant = "moon",
       bold_vert_split = false,
