@@ -35,7 +35,6 @@ return {
         lualine_c = {},
         lualine_x = {},
         lualine_y = {},
-        lualine_z = {{ "filename", path = 1 }}
       },
       winbar = {},
       inactive_winbar = {},
