@@ -4,7 +4,7 @@ return {
     vim.keymap.set("n", "<leader>n", ":NvimTreeToggle<CR>" )
 
     require("nvim-tree").setup({
-      view = { adaptive_size = true, side = "left" },
+      view = { adaptive_size = true, side = "right" },
       update_focused_file = { enable = true },
 
       on_attach = function (bufnr)
