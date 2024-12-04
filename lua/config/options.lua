@@ -22,6 +22,9 @@ vim.opt.list = true                                         -- Sets how neovim w
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' } -- Sets how neovim will display certain whitespace in the editor.
 vim.opt.inccommand = 'split'                                -- Preview substitutions
 vim.opt.laststatus = 3                                      -- Global statusline
+vim.opt.foldmethod='indent'
+vim.opt.foldlevel=1
+vim.opt.foldnestmax=2
 
 -- Search
 vim.opt.hlsearch = true                                     -- highlights all instances of the search pattern in the file
