@@ -7,24 +7,32 @@ return {
   },
   config = function()
     vim.keymap.set("n", "<C-p>", function()
-      require("telescope").extensions.file_browser.file_browser({ path = "%:h:p", select_buffer = true })
-    end)
-
-    vim.keymap.set("n", "<leader>ps", function()
-      require("telescope.builtin").grep_string({ search = vim.fn.input("Grep > ") })
-    end)
-
-    vim.keymap.set("n", "<leader>gf", function()
       require("telescope.builtin").git_files()
     end)
 
-    vim.keymap.set("n", "<leader>ff", function()
-      require("telescope.builtin").git_files()
-    end)
-
-    vim.keymap.set("n", "<leader>wg", function()
+    vim.keymap.set("n", "<C-g>", function()
       require("telescope.builtin").live_grep()
     end)
+
+    -- vim.keymap.set("n", "<C-p>", function()
+    --   require("telescope").extensions.file_browser.file_browser({ path = "%:h:p", select_buffer = true })
+    -- end)
+
+    -- vim.keymap.set("n", "<leader>ps", function()
+    --   require("telescope.builtin").grep_string({ search = vim.fn.input("Grep > ") })
+    -- end)
+
+    -- vim.keymap.set("n", "<leader>gf", function()
+    --   require("telescope.builtin").git_files()
+    -- end)
+
+    -- vim.keymap.set("n", "<leader>ff", function()
+    --   require("telescope.builtin").find_files()
+    -- end)
+
+    -- vim.keymap.set("n", "<leader>wg", function()
+    --   require("telescope.builtin").live_grep()
+    -- end)
 
     require("telescope").setup({
       extensions = {
