@@ -26,3 +26,9 @@ vim.api.nvim_create_augroup('default', { clear = true })
       vim.keymap.set("n", "<F4>", vim.lsp.buf.code_action, opts)
     end
   })
+
+  -- Disable folding in Telescope's result window.
+  vim.api.nvim_create_autocmd("FileType", {
+    pattern = "TelescopeResults",
+    command = [[setlocal nofoldenable]]
+  })
