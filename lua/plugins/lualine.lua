@@ -29,13 +29,13 @@ return {
         lualine_y = { "progress" },
         lualine_z = { "location" }
       },
-      tabline = {
-        lualine_a = {{ "tabs", max_length = vim.o.columns, mode = 1 }},
-        lualine_b = {},
-        lualine_c = {},
-        lualine_x = {},
-        lualine_y = {},
-      },
+      -- tabline = {
+      --   lualine_a = {{ "tabs", max_length = vim.o.columns, mode = 1 }},
+      --   lualine_b = {},
+      --   lualine_c = {},
+      --   lualine_x = {},
+      --   lualine_y = {},
+      -- },
       winbar = {},
       inactive_winbar = {},
       extensions = {}

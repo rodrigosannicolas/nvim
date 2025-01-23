@@ -24,12 +24,12 @@ vim.opt.inccommand = 'split'                                -- Preview substitut
 vim.opt.laststatus = 3                                      -- Global statusline
 
 -- Folds
-vim.opt.foldmethod = "expr"                                 -- Name of the current folding method
-vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"        -- Expression used for "expr" folding
-vim.opt.foldnestmax = 1                                     -- Maximum nesting
-vim.opt.foldcolumn = "0"                                    -- Width for a column on the side of the window to indicate folds
-vim.opt.foldtext = ""                                       -- Show the first line of the fols syntax highlighted
-vim.opt.foldlevel = 0                                       -- When 'foldlevel' is 0, all folds are closed
+-- vim.opt.foldmethod = "expr"                                 -- Name of the current folding method
+-- vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"        -- Expression used for "expr" folding
+-- vim.opt.foldnestmax = 1                                     -- Maximum nesting
+-- vim.opt.foldcolumn = "0"                                    -- Width for a column on the side of the window to indicate folds
+-- vim.opt.foldtext = ""                                       -- Show the first line of the fols syntax highlighted
+-- vim.opt.foldlevel = 0                                       -- When 'foldlevel' is 0, all folds are closed
 
 -- Search
 vim.opt.hlsearch = true                                     -- highlights all instances of the search pattern in the file
