@@ -24,8 +24,7 @@ vim.keymap.set("i", "jj", "<esc>", { desc = 'Exit insert mode and enter normal m
 -- Undo breakpoints
 vim.keymap.set("i", ",", ",<c-g>u", { desc = 'Undo the last change after entering a comma' })
 vim.keymap.set("i", ".", ".<c-g>u", { desc = 'Undo the last change after entering a period' })
-vim.keymap.set("i", "!", "!<c-g>u", { desc = 'Undo the last change after entering an exclamation mark' })
-vim.keymap.set("i", "?", "?<c-g>u", { desc = 'Undo the last change after entering a question mark' })
+vim.keymap.set("i", "!", "!<c-g>u", { desc = 'Undo the last change after entering an exclamation mark' }) vim.keymap.set("i", "?", "?<c-g>u", { desc = 'Undo the last change after entering a question mark' })
 vim.keymap.set("i", ";", ";<c-g>u", { desc = 'Undo the last change after entering a semicolon' })
 
 -- Diagnostics
@@ -55,3 +54,6 @@ vim.keymap.set("n", "N", "Nzzzv", { desc = 'Move to the previous search match an
 -- Reorder opened tabs
 vim.keymap.set("n", "<leader>-", ":tabmove -1<CR>", { desc = 'Move current tab to the left' })
 vim.keymap.set("n", "<leader>+", ":tabmove +1<CR>", { desc = 'Move current tab to the right' })
+
+-- Zenomde
+vim.keymap.set("n", "<leader>z", ":ZenMode<CR>", { desc = "Toggle ZenMode" })

@@ -1,10 +1,10 @@
 return {
-  "folke/tokyonight.nvim",
-  lazy = false,
+  "catppuccin/nvim",
+  name = "catppuccin",
   priority = 1000,
-  opts = {},
   config = function()
-    vim.cmd("colorscheme tokyonight")
+    vim.cmd("colorscheme catppuccin")
     vim.api.nvim_set_hl(0, "CursorLine", { bg = "#212327" })
   end,
 }
+
