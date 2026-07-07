@@ -6,11 +6,12 @@ return {
     "hrsh7th/nvim-cmp",
     "hrsh7th/cmp-nvim-lsp",
     "L3MON4D3/LuaSnip",
+    "rafamadriz/friendly-snippets",
   },
   config = function()
     require("mason").setup({})
     require("mason-lspconfig").setup({
-      ensure_installed = { "ts_ls", "lua_ls", "graphql", "pyright" },
+      ensure_installed = { "ts_ls", "lua_ls", "pyright", "ruff" },
       handlers = {
         -- DEFAULT SETUP
         function(server)
@@ -37,6 +38,34 @@ return {
                 }
               }
             }
+          })
+        end,
+        pyright = function()
+          require('lspconfig').pyright.setup({
+            capabilities = require('cmp_nvim_lsp').default_capabilities(),
+            settings = {
+              pyright = {
+                -- Ruff handles import organizing
+                disableOrganizeImports = true,
+              },
+              python = {
+                analysis = {
+                  typeCheckingMode = 'basic',
+                  autoSearchPaths = true,
+                  useLibraryCodeForTypes = true,
+                  diagnosticMode = 'openFilesOnly',
+                },
+              },
+            },
+          })
+        end,
+        ruff = function()
+          require('lspconfig').ruff.setup({
+            capabilities = require('cmp_nvim_lsp').default_capabilities(),
+            -- Let pyright provide hover info; ruff only lints/formats
+            on_attach = function(client)
+              client.server_capabilities.hoverProvider = false
+            end,
           })
         end
       }

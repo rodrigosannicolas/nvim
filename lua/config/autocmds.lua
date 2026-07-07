@@ -27,3 +27,15 @@ vim.api.nvim_create_augroup('default', { clear = true })
     end
   })
 
+  -- Format Python files with ruff on save
+  vim.api.nvim_create_autocmd('BufWritePre', {
+    group    = 'default',
+    pattern  = '*.py',
+    callback = function(event)
+      vim.lsp.buf.format({
+        bufnr  = event.buf,
+        filter = function(client) return client.name == 'ruff' end,
+      })
+    end
+  })
+
